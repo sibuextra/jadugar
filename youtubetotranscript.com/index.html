@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="en" data-theme="light" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff0000" />
+    <meta name="apple-mobile-web-app-title" content="YouTube To Transcript" />
+    <meta name="application-name" content="YouTube To Transcript" />
+    <meta name="msapplication-TileColor" content="#2b5797" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                "gtm.start": new Date().getTime(),
+                event: "gtm.js"
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != "dataLayer" ? "&l=" + l : "";
+            j.async = true;
+            j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "GTM-MVSDK66G");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <script>
+        function CookieBotWithErrorHandler() {
+            try {
+                if (typeof Cookiebot !== "undefined") {
+                    Cookiebot.renew();
+                } else {
+                    console.error("Cookiebot is not defined");
+                    var dialog = document.getElementById("error-with-consent");
+                    dialog.showModal();
+                }
+            } catch (error) {
+                console.error("Error in CookieBotWithErrorHandler: ", error);
+            }
+        }
+    </script>
+
+    <!-- Primary Meta Tags -->
+    <title>
+        Youtube to Transcript - Read Videos and Take Notes [100% Free 😎]
+    </title>
+    <meta name="title" content="Youtube to Transcript  - Read Videos and Take Notes [100% Free 😎]" />
+    <meta name="description" content="Get YouTube Transcript and use with chatGPT! 🚀 Paste a YouTube URL to generate the
+transcript. Copy with a click ⚡️, Change language 🌍 and Translate to 125+ languages.
+Perfect for note-taking 📝 or using with chatGPT! 💬" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://youtubetotranscript.com/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://youtubetotranscript.com" />
+    <meta property="og:title" content="Youtube to Transcript  - Read Videos and Take Notes [100% Free 😎]" />
+    <meta property="og:description" content="Get YouTube Transcript and use with chatGPT! 🚀 Paste a YouTube URL to generate the
+transcript. Copy with a click ⚡️, Change language 🌍 and Translate to 125+ languages.
+Perfect for note-taking 📝 or using with chatGPT! 💬" />
+    <meta property="og:image" content="https://youtubetotranscript.com/YouTube_To_Transcript_Thumbnail.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://youtubetotranscript.com" />
+    <meta property="twitter:title" content="Youtube to Transcript  - Read Videos and Take Notes [100% Free 😎]" />
+    <meta property="twitter:description" content="Get YouTube Transcript and use with chatGPT! 🚀 Paste a YouTube URL to generate the
+transcript. Copy with a click ⚡️, Change language 🌍 and Translate to 125+ languages.
+Perfect for note-taking 📝 or using with chatGPT! 💬" />
+    <meta property="twitter:image" content="https://youtubetotranscript.com/YouTube_To_Transcript_Thumbnail.png" />
+
+    <!-- Schema.ORG -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "YouTube To Transcript",
+            "url": "https://youtubetotranscript.com/",
+            "image": "https://youtubetotranscript.com/youtubetotranscript.png",
+            "screenshot": "https://youtubetotranscript.com/youtubetotranscript.png",
+            "description": "Get YouTube Transcript and use with chatGPT! 🚀 Paste a YouTube URL to generate the transcript. Copy with a click ⚡️, Change language 🌍 and Translate to 125+ languages. Perfect for note-taking 📝 or using with chatGPT! 💬",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://youtubetotranscript.com/transcript?youtube_url={youtube_url}",
+                "query-input": "required name=youtube_url"
+            }
+        }
+    </script>
+
+    <script>
+        try {
+            // Function to get a cookie by name
+            function getCookie(name) {
+                var nameEQ = name + "=";
+                var ca = document.cookie.split(";");
+                for (var i = 0; i < ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == " ") c = c.substring(1, c.length);
+                    if (c.indexOf(nameEQ) == 0)
+                        return c.substring(nameEQ.length, c.length);
+                }
+                return null;
+            }
+
+            // Get the theme from the cookie
+            var theme = getCookie("website-theme");
+
+            // If the theme is set in the cookie, apply it to the HTML element
+            if (theme) {
+                document.documentElement.setAttribute("data-theme", theme);
+            } else {
+                // If the theme is not set in the cookie, use the OS preference
+                var osTheme =
+                    window.matchMedia &&
+                    window.matchMedia("(prefers-color-scheme: dark)").matches ?
+                    "black" :
+                    "bumblebee";
+                document.documentElement.setAttribute("data-theme", osTheme);
+            }
+        } catch (error) {
+            console.error("An error occurred while setting preference:", error);
+        }
+    </script>
+
+    <link rel="stylesheet" href="/css/index-ef7bfd005c.min.css" />
+    <script src="/js/preference-42fb490f7f.min.js"></script>
+    <script src="/js/main-8b4d476199.min.js"></script>
+</head>
+
+<body class="flex flex-col h-full min-h-screen" id="app">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVSDK66G" height="0" width="0"
+      style="display: none; visibility: hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <nav class="navbar bg-base-100">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-circle relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+          </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a href="/contact">Contact</a></li>
+                    <li>
+                        <a href="/terms" rel="terms-of-service">Terms and Conditions</a>
+                    </li>
+                    <li><a href="/privacy" rel="privacy-policy">Privacy Policy</a></li>
+                    <li><a href="javascript: CookieBotWithErrorHandler()">Change Cookie Consent</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar-center">
+            <a class="text-xs btn btn-ghost md:text-xl sm:text-sm" href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" class="hidden w-8 h-8 fill-red-400 sm:inline" viewBox="0 0 256 256">
+          <path d="M232,64V192a8,8,0,0,1-8,8H32a8,8,0,0,1-8-8V64a8,8,0,0,1,8-8H224A8,8,0,0,1,232,64Z" opacity="0.2">
+          </path>
+          <path
+            d="M224,48H32A16,16,0,0,0,16,64V192a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48Zm0,144H32V64H224V192ZM48,136a8,8,0,0,1,8-8H72a8,8,0,0,1,0,16H56A8,8,0,0,1,48,136Zm160,0a8,8,0,0,1-8,8H104a8,8,0,0,1,0-16h96A8,8,0,0,1,208,136Zm-48,32a8,8,0,0,1-8,8H56a8,8,0,0,1,0-16h96A8,8,0,0,1,160,168Zm48,0a8,8,0,0,1-8,8H184a8,8,0,0,1,0-16h16A8,8,0,0,1,208,168Z">
+          </path>
+        </svg>
+        YouTubeToTranscript.com
+      </a>
+        </div>
+        <div class="navbar-end">
+            <label class="btn btn-ghost btn-circle swap swap-rotate">
+        <!-- this hidden checkbox controls the state -->
+        <input type="checkbox" class="theme-controller" id="theme-switcher" value="black" />
+        <!-- sun icon -->
+        <svg class="w-5 h-5 fill-current swap-on" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+        </svg>
+        <!-- moon icon -->
+        <svg class="w-5 h-5 fill-current swap-off" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+        </svg>
+      </label>
+        </div>
+    </nav>
+
+    <article class="min-h-[calc(100vh-4rem)] sm:min-h-full hero bg-primary text-primary-content" id="hero">
+        <div class="items-center justify-center text-center hero-content sm:py-6">
+            <div class="max-w-xl">
+                <div class="block px-2 py-2 mx-auto mb-4 text-xs rounded-btn glass max-w-fit min-h-4">
+                    <span class="hidden macos">
+            <kbd class="kbd">cmd</kbd>+<kbd class="kbd">d</kbd>
+          </span>
+                    <span class="hidden window">
+            <kbd class="kbd">ctrl</kbd>+<kbd class="kbd">d</kbd>
+          </span>
+                    <span class="hidden default"><svg xmlns="http://www.w3.org/2000/svg" class="inline w-4 h-4 fill-current"
+              viewBox="0 0 256 256">
+              <path
+                d="M184.13,147.7a8.08,8.08,0,0,0-2.54,7.89l13.52,58.54a8,8,0,0,1-11.89,8.69l-51.1-31a7.93,7.93,0,0,0-8.24,0l-51.1,31a8,8,0,0,1-11.89-8.69l13.52-58.54a8.08,8.08,0,0,0-2.54-7.89L26.76,108.35A8,8,0,0,1,31.3,94.28l59.46-5.14a8,8,0,0,0,6.67-4.88L120.66,28.9a8,8,0,0,1,14.68,0l23.23,55.36a8,8,0,0,0,6.67,4.88l59.46,5.14a8,8,0,0,1,4.54,14.07Z"
+                opacity="0.2"></path>
+              <path
+                d="M239.2,97.29a16,16,0,0,0-13.81-11L166,81.17,142.72,25.81h0a15.95,15.95,0,0,0-29.44,0L90.07,81.17,30.61,86.32a16,16,0,0,0-9.11,28.06L66.61,153.8,53.09,212.34a16,16,0,0,0,23.84,17.34l51-31,51.11,31a16,16,0,0,0,23.84-17.34l-13.51-58.6,45.1-39.36A16,16,0,0,0,239.2,97.29Zm-15.22,5-45.1,39.36a16,16,0,0,0-5.08,15.71L187.35,216v0l-51.07-31a15.9,15.9,0,0,0-16.54,0l-51,31h0L82.2,157.4a16,16,0,0,0-5.08-15.71L32,102.35a.37.37,0,0,1,0-.09l59.44-5.14a16,16,0,0,0,13.35-9.75L128,32.08l23.2,55.29a16,16,0,0,0,13.35,9.75L224,102.26S224,102.32,224,102.33Z">
+              </path>
+            </svg></span>&nbsp;Bookmark us!
+                </div>
+                <h1 class="text-5xl font-bold">Youtube to Transcript</h1>
+                <p class="py-6">
+                    Generate YouTube Transcript for FREE. <br /> Access all Transcript Languages, Translate to 125+ Languages, Easy Copy and Edit!
+                </p>
+
+                <form class="flex flex-col mx-auto sm:flex-row sm:justify-center" action="/transcript" method="post">
+                    <input type="text" name="youtube_url" placeholder="Paste YouTube URL here..." class="w-full mb-2 truncate input input-bordered input-rounded sm:w-sm sm:mb-0 sm:mr-2" autocomplete="on" pattern="^((?:https?:)?\/\/)?((?:www|m|gaming)\.)?((?:youtu.be|youtube.com)(?:\/(?:[\w\-]+\?v=|embed\/|shorts\/|live\/|v\/)?))([\w\-]{11})(\S+)?$"
+                        required autofocus />
+                    <button type="submit" class="w-full btn btn-secondary btn-rounded sm:w-auto">
+            <span class="hidden loading loading-spinner"></span>
+            Get Free Transcript
+          </button>
+                </form>
+                <p class="pt-6 text-sm">
+                    <strong class="inline-block py-2 mx-4 text-center text-nowrap">
+            <svg xmlns="http://www.w3.org/2000/svg" class="inline w-6 h-6 fill-current" viewBox="0 0 256 256">
+              <path d="M216,40V168H168V88H88V40Z" opacity="0.2"></path>
+              <path
+                d="M216,32H88a8,8,0,0,0-8,8V80H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H168a8,8,0,0,0,8-8V176h40a8,8,0,0,0,8-8V40A8,8,0,0,0,216,32ZM160,208H48V96H160Zm48-48H176V88a8,8,0,0,0-8-8H96V48H208Z">
+              </path>
+            </svg>
+            One-click Copy
+          </strong>
+                    <strong class="inline-block py-2 mx-4 text-center text-nowrap">
+            <svg xmlns="http://www.w3.org/2000/svg" class="inline w-6 h-6 fill-current" viewBox="0 0 256 256">
+              <path d="M216,184H136l40-80ZM88,127.56h0A95.78,95.78,0,0,0,120,56H56A95.78,95.78,0,0,0,88,127.56Z"
+                opacity="0.2"></path>
+              <path
+                d="M239.15,212.42l-56-112a8,8,0,0,0-14.31,0l-21.71,43.43A88,88,0,0,1,100,126.93,103.65,103.65,0,0,0,127.69,64H152a8,8,0,0,0,0-16H96V32a8,8,0,0,0-16,0V48H24a8,8,0,0,0,0,16h87.63A87.7,87.7,0,0,1,88,116.35a87.74,87.74,0,0,1-19-31,8,8,0,1,0-15.08,5.34A103.63,103.63,0,0,0,76,127a87.55,87.55,0,0,1-52,17,8,8,0,0,0,0,16,103.46,103.46,0,0,0,64-22.08,104.18,104.18,0,0,0,51.44,21.31l-26.6,53.19a8,8,0,0,0,14.31,7.16L140.94,192h70.11l13.79,27.58A8,8,0,0,0,232,224a8,8,0,0,0,7.15-11.58ZM148.94,176,176,121.89,203.05,176Z">
+              </path>
+            </svg>
+            Supports Translation
+          </strong>
+                    <strong class="inline-block py-2 mx-4 text-center text-nowrap">
+            <svg xmlns="http://www.w3.org/2000/svg" class="inline w-6 h-6 fill-current" viewBox="0 0 256 256">
+              <path d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z" opacity="0.2"></path>
+              <path
+                d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24ZM101.63,168h52.74C149,186.34,140,202.87,128,215.89,116,202.87,107,186.34,101.63,168ZM98,152a145.72,145.72,0,0,1,0-48h60a145.72,145.72,0,0,1,0,48ZM40,128a87.61,87.61,0,0,1,3.33-24H81.79a161.79,161.79,0,0,0,0,48H43.33A87.61,87.61,0,0,1,40,128ZM154.37,88H101.63C107,69.66,116,53.13,128,40.11,140,53.13,149,69.66,154.37,88Zm19.84,16h38.46a88.15,88.15,0,0,1,0,48H174.21a161.79,161.79,0,0,0,0-48Zm32.16-16H170.94a142.39,142.39,0,0,0-20.26-45A88.37,88.37,0,0,1,206.37,88ZM105.32,43A142.39,142.39,0,0,0,85.06,88H49.63A88.37,88.37,0,0,1,105.32,43ZM49.63,168H85.06a142.39,142.39,0,0,0,20.26,45A88.37,88.37,0,0,1,49.63,168Zm101.05,45a142.39,142.39,0,0,0,20.26-45h35.43A88.37,88.37,0,0,1,150.68,213Z">
+              </path>
+            </svg>
+            Multiple Languages
+          </strong>
+                </p>
+            </div>
+        </div>
+    </article>
+
+    <section class="w-full py-8 overflow-hidden">
+        <div class="w-full max-w-xl mx-auto">
+            <div class="flex flex-col justify-center px-4 py-4 bg-base-100 text-base-content">
+                <h2 style="
+              text-transform: none;
+              --tw-text-opacity: 1;
+              color: rgba(254, 242, 242, var(--tw-text-opacity));
+              font-weight: 700;
+              font-size: 1.875rem;
+              line-height: 2.25rem;
+              padding-top: 0.9rem;
+              padding-bottom: 0.9rem;
+              padding-left: 1rem;
+              padding-right: 1rem;
+              --tw-bg-opacity: 1;
+              background-color: rgba(239, 68, 68, var(--tw-bg-opacity));
+              --tw-border-opacity: 1;
+              border-color: rgba(254, 202, 202, var(--tw-border-opacity));
+              border-bottom-width: 2px;
+              border-radius: 1rem;
+              justify-content: flex-start;
+              width: -moz-fit-content;
+              width: fit-content;
+              display: inline-flex;
+              margin: 0;
+              margin-bottom: 1rem;
+              box-sizing: border-box;
+              border-style: solid;
+            ">
+                    Effortlessly Generate YouTube Transcripts with Copy and Translation Features! 🚀
+                </h2>
+                <!-- NEW -->
+                <p class="mb-4">
+                    Use
+                    <a title="YouTube To Transcript" href="https://youtubetotranscript.com" class="underline">YouTube To Transcript</a> to effortlessly extract the transcript from any YouTube video. But that's not all! We've added powerful new features
+                    to make learning, creating, and sharing easier than ever.
+                </p>
+                <h2 class="text-transform-none -rotate-1 text-2xl font-bold mb-4 inline-flex py-[0.9rem] px-4 justify-start w-fit rounded-box bg-purple-600 text-purple-50">
+                    New Features 😎
+                </h2>
+                <ul class="mb-8 list-disc list-inside">
+                    <li>
+                        <strong>Remove Unwanted Sections</strong>: Cut out sponsored segments, intros, outros, or anything else you don't need.
+                    </li>
+                    <li>
+                        <strong>Free AI Prompt Library</strong>: Access a collection of prompts to use with your transcript for generating summaries, notes, creative content, and more!
+                    </li>
+                    <li>
+                        <strong>Translation</strong>: Choose the language for the transcript and translate it to over 125 languages.
+                    </li>
+                </ul>
+                <h2 class="text-transform-none -rotate-1 text-2xl font-bold mb-4 inline-flex py-[0.9rem] px-4 justify-start w-fit rounded-box bg-red-200 text-red-950">
+                    How to Generate a YouTube Transcript 🎥
+                </h2>
+                <ul class="mb-8 list-decimal list-inside">
+                    <li>Paste the YouTube video link and click "Get Transcript."</li>
+                    <li>
+                        Customize your transcript by removing unwanted sections and selecting your language.
+                    </li>
+                    <li>
+                        Explore our AI Prompt Library and take your transcript to the next level!
+                    </li>
+                </ul>
+                <p class="mb-4 font-bold underline text-pretty underline-offset-8">
+                    <a href="/transcript?v=1WEAJ-DFkHE&current_language_code=en">
+            Try it below 👇
+          </a>
+                </p>
+
+                <form class="flex flex-col w-full p-8 mx-auto mb-8 sm:flex-row sm:justify-center bg-primary rounded-box glass" action="/transcript" method="post">
+                    <input type="text" name="youtube_url" placeholder="Paste YouTube URL here..." class="w-full mb-2 truncate input input-bordered input-rounded sm:w-64 sm:mb-0 sm:mr-2" autocomplete="url" pattern="^((?:https?:)?\/\/)?((?:www|m|gaming)\.)?((?:youtu.be|youtube.com)(?:\/(?:[\w\-]+\?v=|embed\/|shorts\/|live\/|v\/)?))([\w\-]{11})(\S+)?$"
+                        required />
+                    <button type="submit" class="w-full btn btn-secondary btn-rounded sm:w-auto">
+            <span class="hidden loading loading-spinner"></span>
+            Get Free Transcript
+          </button>
+                </form>
+
+                <p class="mb-2">You will also receive:</p>
+                <ul class="mb-8 list-disc list-inside">
+                    <li class="">
+                        <strong>Embedded Player</strong>: To view the video and transcript side by side.
+                    </li>
+                    <li class="">
+                        <strong>Copy Button</strong>: To copy the transcript with one click.
+                    </li>
+                    <li class="">
+                        <strong>Change Language Button</strong>: To change the language of the transcript.
+                    </li>
+                    <li class="">
+                        <strong>Translation Button</strong>: To translate the transcript to over 125 languages.
+                    </li>
+                    <li>
+                        <em>Click on any line in the transcript to jump to that part of the
+              video. 🔍</em>
+                    </li>
+                </ul>
+
+                <h2 class="text-transform-none -rotate-1 text-2xl font-bold mb-4 inline-flex py-[0.9rem] px-4 justify-start w-fit rounded-box bg-purple-700 text-purple-50">
+                    Why you need YouTube Transcript? 🤔
+                </h2>
+                <p class="mb-8">
+                    YouTube videos are invaluable for learning and entertainment. However, sometimes you need to
+                    <strong class="">take notes</strong> or share the content with someone who <strong class="">prefers reading</strong>. This tool makes it a breeze to obtain the transcript from any YouTube video.
+                </p>
+
+                <h3 class="text-transform-none -rotate-1 text-xl font-semibold mb-4 inline-flex py-[0.5rem] px-4 justify-start w-fit rounded-box bg-green-600 text-green-50">
+                    For Note Takers 📝
+                </h3>
+                <p class="mb-8">
+                    It can be challenging to follow along with a video while taking notes. With the transcript, you can easily
+                    <strong class="">copy and paste</strong> the text into your notes. Even better, you can
+                    <strong class="">paste the YouTube transcript into chatGPT</strong> or other AI tools to quickly
+                    <strong class="">make notes for you</strong>. Some Podcasts are uploaded on YouTube, and you can get their transcript to use for note-taking.
+                </p>
+
+                <p class="mb-8">
+                    We also provide an embedded player where you can view the video and transcript simultaneously. You can click on any line in the transcript to jump to that part in the video.
+                </p>
+
+                <p class="mb-8">
+                    If the video is not in your native language, you can
+                    <strong class="">translate the transcript to your language</strong>, making learning and note-taking a breeze.
+                </p>
+
+                <h3 class="text-transform-none -rotate-1 text-xl font-semibold mb-4 inline-flex py-[0.5rem] px-4 justify-start w-fit rounded-box bg-green-200 text-green-950">
+                    For Content Creators 🎬
+                </h3>
+                <p class="mb-8">
+                    Content creators can use this tool to research and create content effortlessly. Simply add your YouTube video URL and get the transcript. You can use the transcript to craft blog posts, articles, or detailed show notes related to your video content.
+                </p>
+
+                <p class="mb-2">Some ideas that we love:</p>
+                <ul class="mb-8 list-disc list-inside">
+                    <li class="">
+                        <strong class="">Create Quiz, Meme, Infographic</strong>, and more from the transcript. Reuse old content to increase engagement!
+                    </li>
+                    <li class="">
+                        <strong class="">Summarize the transcript</strong> and add it to the video description to
+                        <strong class="">rank higher in search engines.</strong>
+                    </li>
+                    <li class="">
+                        Extract key points from the transcript to<strong class="">
+              create engaging social media posts</strong> that entice viewers to watch the full video.
+                    </li>
+                    <li class="">
+                        Use the transcript as a foundation for blog posts, articles, or detailed show notes related to your video content.
+                        <strong class="">Some people prefer reading over watching videos.</strong> This will help you reach a wider audience.
+                    </li>
+                    <li>
+                        Add summaries and key points to blog posts, tweets, newsletter, and more.
+                    </li>
+                </ul>
+
+                <h2 class="text-transform-none -rotate-1 text-2xl font-bold mb-4 inline-flex py-[0.9rem] px-4 justify-start w-fit rounded-box bg-yellow-200 text-yellow-950">
+                    Pair YouTube Transcripts with AI tools 🤖
+                </h2>
+                <p class="mb-8">
+                    Using AI to learn, create content, and take notes is the future.
+                </p>
+                <p class="mb-8">
+                    You can use the transcript with other AI tools to generate summaries, notes, or even generate a new video with the transcript.
+                </p>
+
+                <p class="mb-2">
+                    Some Ideas to use the transcript with other AI tools are:
+                </p>
+                <ul class="list-disc list-inside">
+                    <li class="">Generate notes</li>
+                    <li class="">Extract key points</li>
+                    <li class="">Generate summary</li>
+                    <li class="">Generate questions and answers aka generate quiz</li>
+                    <li class="">Extract powerful quotes from the video</li>
+                    <li class="">Ask questions and get answers from the video</li>
+                    <li class="">
+                        Find more information about the topics mentioned in the video
+                    </li>
+                    <li class="">Create Fan quizzes and trivia.</li>
+                    <li>Create memes and infographic</li>
+                </ul>
+                <h2 class="text-transform-none -rotate-1 text-2xl font-bold mb-4 mt-8 inline-flex py-[0.9rem] px-4 justify-start w-fit rounded-box bg-green-600 text-green-50">
+                    FAQ
+                </h2>
+                <div class="w-full join join-vertical">
+                    <div class="collapse collapse-arrow join-item">
+                        <input type="radio" name="faq-accordion" checked="checked" />
+                        <div class="mb-4 text-lg font-bold cursor-pointer collapse-title">
+                            Is YouTube To Transcript free to use?
+                        </div>
+                        <div class="ml-4 collapse-content">
+                            <p>
+                                Yes, YouTube To Transcript is completely free to use. You can easily extract subtitles/transcripts generated by YouTube from YouTube videos without any cost.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="collapse collapse-arrow join-item">
+                        <input type="radio" name="faq-accordion" />
+                        <div class="mb-4 text-lg font-bold cursor-pointer collapse-title">
+                            How do I access the transcript after generating it?
+                        </div>
+                        <div class="ml-4 collapse-content">
+                            <p>
+                                Once you've generated the transcript, you can copy it with just one click using the provided Copy button. You can also view the transcript alongside the video using the Embedded Player.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="collapse collapse-arrow join-item">
+                        <input type="radio" name="faq-accordion" />
+                        <div class="mb-4 text-lg font-bold cursor-pointer collapse-title">
+                            Can I translate the transcript to other languages?
+                        </div>
+                        <div class="ml-4 collapse-content">
+                            <p>
+                                Absolutely! YouTube To Transcript allows you to translate the subtitles/transcript to over 125 languages. Simply select your desired language using the Change Language button.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="collapse collapse-arrow join-item">
+                        <input type="radio" name="faq-accordion" />
+                        <div class="mb-4 text-lg font-bold cursor-pointer collapse-title">
+                            Is there a limit to the length of the video I can transcribe?
+                        </div>
+                        <div class="ml-4 collapse-content">
+                            <p>
+                                Currently, there are no limits on the length of the video you can transcribe. You can transcribe videos of any duration seamlessly.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="collapse collapse-arrow join-item">
+                        <input type="radio" name="faq-accordion" />
+                        <div class="mb-4 text-lg font-bold cursor-pointer collapse-title">
+                            How long does it take to generate the transcript?
+                        </div>
+                        <div class="ml-4 collapse-content">
+                            <p>
+                                The transcript is generated almost instantly after you paste the YouTube video link and click "Get Transcript." You'll have your transcript ready within seconds!
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="collapse collapse-arrow join-item">
+                        <input type="radio" name="faq-accordion" />
+                        <div class="mb-4 text-lg font-bold cursor-pointer collapse-title">
+                            Can I download the transcript?
+                        </div>
+                        <div class="ml-4 collapse-content">
+                            <p>
+                                Currently, we do not offer a download option for the transcript directly from our platform. However, you can easily copy the transcript and paste it into your preferred document or application for further use. We plan to support this feature in the future.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="collapse collapse-arrow join-item">
+                        <input type="radio" name="faq-accordion" />
+                        <div class="mb-4 text-lg font-bold cursor-pointer collapse-title">
+                            Is there a limit to the number of transcripts I can generate?
+                        </div>
+                        <div class="ml-4 collapse-content">
+                            <p>
+                                No, there are no limits on the number of transcripts you can generate. Feel free to transcribe as many YouTube videos as you need!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#hero" class="mt-4 btn btn-primary">Get YouTube Transcript For Free!</a>
+            </div>
+        </div>
+    </section>
+
+    <p class="w-full p-4 text-xs bg-neutral text-neutral-content">
+        Disclaimer: YouTubeToTranscript.com is an independent service and is not associated or affiliated with YouTube or Google. Any brand names or logos displayed on this site are used for illustrative purposes only and do not imply endorsement or partnership.
+    </p>
+    <footer class="items-center p-4 footer bg-neutral text-neutral-content">
+        <aside class="items-center grid-flow-row">
+            <p>Copyright © 2024 - All rights reserved.</p>
+        </aside>
+        <nav class="grid-flow-row gap-4 underline sm:grid-flow-col md:place-self-center md:justify-self-end">
+            <a href="/terms">Terms and Conditions</a>
+            <a href="javascript: CookieBotWithErrorHandler()">Do not sell my personal information</a>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </footer>
+    <dialog id="error-with-consent" class="modal">
+        <div class="modal-box">
+            <form method="dialog">
+                <button class="absolute btn btn-sm btn-circle btn-ghost right-2 top-2">
+          ✕
+        </button>
+            </form>
+            <h3 class="text-lg font-bold">
+                <strong>Oops! Something went wrong.</strong>
+            </h3>
+            <p class="py-4">
+                It seems our Consent Manager (<strong>CMP</strong>) couldn't load properly.
+            </p>
+            <p class="py-4">
+                To ensure you have the best experience on our site, please consider
+                <em>disabling your ad-blocker</em> or
+                <em>adjusting your browser's privacy settings</em> to allow the loading of our <strong>Cookie Consent Manager</strong> and
+                <strong>Google Tag Manager</strong>. Many features of this site may not work as intended until you do so.
+            </p>
+            <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn"><strong>Close</strong></button>
+                </form>
+            </div>
+        </div>
+        <form method="dialog" class="modal-backdrop">
+            <button><strong>Close</strong></button>
+        </form>
+    </dialog>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"93db9042ff5de175","version":"2025.4.0-1-g37f21b1","r":1,"serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"d884f0a602ca4a948dd05ef313480c9a","b":1}'
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
